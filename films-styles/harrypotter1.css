@@ -1,0 +1,290 @@
+@font-face {
+  font-family: main;
+  src: url("../fonts/HARRYP__.TTF");
+}
+@font-face {
+  font-family: main2;
+  src: url("../fonts/Crystasea-EayLe.otf");
+}
+@font-face {
+  font-family: texta;  font-weight: 900;    
+  src: url("../fonts/Sofia\ Pro\ Regular.ttf");
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #faf6f0;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 300px) {
+  .intro {
+    overflow-y: hidden;
+    background: rgb(85, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    z-index: 102;
+    align-items: center;
+  }
+
+  .intro-text {
+    margin-left: 10vw;
+    margin-top: -10vh;
+    color: white;
+    font-family: main2;
+    font-size: 1.5rem;
+  }
+
+  .hide {
+   
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+  .next {
+    background: rgb(165, 68, 68);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 103;
+    transform: translateY(100%);
+  }
+  nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    background-color: black;
+    background: none;
+    z-index: 100;
+  }
+
+  .ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    animation: goUl 1s;
+    left: -100%;
+    background-color: #242633;
+    animation-fill-mode: forwards;
+  }
+
+  .li {
+    list-style-type: none;
+    transition: 0.1s;
+  }
+  .li a {
+    font-size: 25px;
+    color: white;
+    font-family: texta;  font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  .head {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    transition: 0.3s;
+
+    /* background-color: #242633; */
+  }
+
+  .head p {
+    font-family: texta;  font-weight: 900;
+    font-size: 20px;
+    margin-top: 5px;
+    display: none;
+    color: white;
+  }
+  .logos {
+    width: 19vw;
+  }
+  .comeUl {
+    animation: comeUl 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes comeUl {
+    from {
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  hr {
+    width: 100%;
+    border-color: rgba(255, 255, 255, 0.671);
+    border-width: 0.5px;
+  }
+  nav:hover hr {
+    border-color: rgba(255, 255, 255, 0.39);
+  }
+  .li:hover {
+    border-bottom: 1px solid rgb(162, 0, 255);
+  }
+  .nav2 {
+    background: none;
+  }
+  .head2 {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.563),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 101;
+    margin-top: 5%;
+    margin-left: 7%;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(2px, 3px);
+    transform: rotate(-45deg) translate(-2px, 3px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -10px);
+    transform: rotate(45deg) translate(-9px, -10px);
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+align-items:center;
+
+   
+  }
+  .mainTitle {
+    font-size: 30px;
+    color: #242633;
+   
+    font-family: main2; 
+  }
+  .mainBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+width: 100vw;
+    z-index: -1;
+   
+   
+    height: 40%;
+    object-fit: cover;
+  }
+  .hero{
+      margin-top: 21vh;
+    
+      width: 40%;
+      height: 40%;
+  }
+  .mainBanner {
+      z-index: 6;
+    position: absolute;
+    top: 0;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.767)0, 0, 0, 0.767));
+    left: 0;
+  }
+  .Maintext{
+      font-family: texta;
+      font-weight: 900;
+      
+      max-width: 80%;
+      margin-left: 10%;
+      font-size: 23px;
+      margin-top: 15%;
+      
+      
+  }
+  .Maintext::first-letter{
+    float: left;
+    font-size: 6rem;
+    line-height: 0.65;
+    margin: 0.1em 0.1em 0.2em 0;
+font-family: main2;  
+color:#cdb373;
+  }
+ 
+  .Maintext p a{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+  .watch{
+
+      display: inline-block;
+      font-family: texta;
+      font-weight: 900;
+      color: white;
+      background-color: #6b63b5;
+      border: none;
+      outline: none;
+      width: 40vw;
+      font-weight: 900;
+    margin-left: 30%;
+      height: 7vh;
+      z-index: 20;
+      font-size: 25px;
+      border-radius: 7vh;
+      margin-top: 5vh;
+      transition: 0.3s;
+    
+}
